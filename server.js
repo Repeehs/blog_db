@@ -40,14 +40,15 @@ App.use(MethodOverride('X-HTTP-Method-Override'));
 App.use(cors());
 
 // Auth Middleware - This will check if the token is valid
-App.all('/api/v1/auth/*', [require('./app/middlewares/auth.middlewares')]);
+// - Delete this after fix -               App.all('/api/v1/auth/*', [require('./app/middlewares/auth.middlewares')]);
 // Routes
-require('./app.route')(App); // configure our routes
+require('./app/route')(App); // configure our routes
 // Create app
 let server = require('http').createServer(App);
 
 // Start app: http://IP_ADDRESS:port
-server.listen(3000, function(){
+server.listen(3000, function(err){
+    if (err) console.log(err);
     console.log('API started listening on port %d', 3000);
 });
 

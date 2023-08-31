@@ -78,7 +78,7 @@ const sendSuccesToken = function(res, token, payload, message = '') {
     return res.json(out);
 };
 
-const sendError = function(res, errorCode, errorMes, httpCode, errorCode, errorDesc, data) {
+const sendError = function(res, errorCode, errorMes, httpCode, errorDesc, data) {
     if(!res) {
         return;
     }
