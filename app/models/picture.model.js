@@ -1,6 +1,6 @@
 const sequel = require('sequelize');
 const mySequel = require('../utils/sequelize.util');
-const patron = require('./patron.model');
+
 
 const picture = mySequel.define('picture', {
     id: {
@@ -31,7 +31,6 @@ const picture = mySequel.define('picture', {
     createdAt: false,
     includeDeleted: true,
     paranoid: true,
-    freezeTableName: true,
     tableName: 'blog_picture',
 });
 

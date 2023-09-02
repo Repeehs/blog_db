@@ -29,7 +29,6 @@ const patron = mySequel.define('patron', {
     createdAt: false,
     includeDeleted: true,
     paranoid: true,
-    freezeTableName: true,
     tableName: 'blog_patron',
 });
 
