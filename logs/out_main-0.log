@@ -1,0 +1,26 @@
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+::1 - - [02/Sep/2023:06:53:51 +0000] "GET /api/blog/pictures HTTP/1.1" 400 68 "-" "PostmanRuntime/7.32.3"
+[0mGET /api/blog/pictures [33m400[0m 1.999 ms - 68[0m
+API started listening on port 3000
