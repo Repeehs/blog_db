@@ -15,24 +15,13 @@ const picture = mySequel.define('picture', {
         allowNull: true,
     },
 
-    link: {
-        type: sequel.STRING(45),
-        alloNull: true,
+    image: {
+        type: sequel.STRING(100),
+        allowNull: true,
     },
-
-    category: {
-        type: sequel.STRING(45),
-        alloNull: true,
-    },
-
-    size: {
-        type: sequel.STRING(45),
-        alloNull: true,
-    },
-
-    price: {
-        type: sequel.STRING(45),
-        alloNull: true,
+    description: {
+        type: sequel.TEXT,
+        allowNull: true,
     },
 
 }, {

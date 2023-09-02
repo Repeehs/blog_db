@@ -40,7 +40,7 @@ App.use(MethodOverride('X-HTTP-Method-Override'));
 App.use(cors());
 
 // Auth Middleware - This will check if the token is valid
-// - Delete this after fix -               App.all('/api/v1/auth/*', [require('./app/middlewares/auth.middlewares')]);
+// App.all('/api/v1/auth/*', [require('./app/middlewares/auth.middlewares')]);
 // Routes
 require('./app/route')(App); // configure our routes
 // Create app

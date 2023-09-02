@@ -14,8 +14,12 @@ const patron = mySequel.define('patron', {
         allowNull: true,
     },
 
-    email: {
-        type: sequel.STRING(100),
+    donation: {
+        type: sequel.BIGINT(225),
+        allowNull: true,
+    },
+    comment: {
+        type: sequel.TEXT,
         allowNull: true,
     },
 }, {

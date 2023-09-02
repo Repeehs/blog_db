@@ -11,10 +11,8 @@ module.exports = {
         try {
             const query = {};
             query.name = req.body.name;
-            query.link = req.body.title;
-            query.category = req.body.category;
-            query.size = req.body.size;
-            query.price = req.body.price;
+            query.image = req.body.image;
+            query.description = req.body.description;
 
             pic.create(query).then((result)=>{
                 'use strict';
@@ -33,7 +31,7 @@ module.exports = {
     getOne: function(req, res) {
         const id = req.params.id || '';
         try {
-            const attributes = ['id', 'name', 'link', 'category', 'size', 'price'];
+            const attributes = ['id', 'name', 'image', 'description'];
 
             const where = {id: id};
 
@@ -105,18 +103,13 @@ module.exports = {
             if(req.body.name) {
                 query.name = req.body.name;
             }
-            if(req.body.link) {
-                query.link = req.body.link;
+            if(req.body.image) {
+                query.image = req.body.image;
             }
-            if(req.body.category) {
-                query.category = req.body.category;
+            if(req.body.description) {
+                query.descripiton = req.body.description;
             }
-            if(req.body.size) {
-                query.size = req.body.size;
-            }
-            if(req.body.price) {
-                query.price = req.body.price;
-            }
+            
             const where = {id: req.params.id};
 
             pic.update(
