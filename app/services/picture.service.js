@@ -19,11 +19,11 @@ module.exports = {
                 return rest.sendSuccessOne(res, result, 200);
             }).catch(function(error) {
                 'use strict';
-                console.log(error);
+                //console.log(error);
                 return rest.sendError(res, 1, 'create_pic_fail', 400, error);
             });
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             return rest.sendError(res, 1, 'create_pic_fail', 400, error);
         }
     },
@@ -62,12 +62,13 @@ module.exports = {
             const sort = [];
             const offset = perPage * (page - 1);
 
-            book.findAndCountAll({
+            pic.findAndCountAll({
                 where: where,
                 limit: perPage,
                 offset: offset,
                 order: sort,
                 raw: true,
+                paranoid: false,
             })
                 .then((data) => {
                     const pages = Math.ceil(data.count / perPage);
@@ -92,9 +93,11 @@ module.exports = {
                     //console.log(res);
                     return rest.sendSuccessMany(res, output, 200);
                 }).catch(function(error) {
+                    //console.log(error);
                     return rest.sendError(res, 1, 'get_list_pitures_fail', 400, error);
             });
         } catch (error) {
+            //console.log(error);
             return rest.sendError(res, 1, 'get_list_pictures_fail', 400, error);
         }
     },
@@ -130,11 +133,11 @@ module.exports = {
                 }
             }).catch(function(error) {
                 'use strict';
-                console.log(error);
+                //console.log(error);
                 return rest.sendError(res, 1, 'update_pic_fail', 400, error);
             });
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             return rest.sendError(res, 1, 'update_pic_fail', 400, error);
         }        
     },

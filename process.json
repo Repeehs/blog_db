@@ -19,7 +19,7 @@
         "DB_PORT": "3306",
         "DB_USER": "root",
         "DB_PASSWORD": "",
-        "DB_NAME": "blog_database",
+        "DB_NAME": "blog_schema",
         "DB_DIALECT": "mysql"
       },
       "env_production" : {
@@ -29,7 +29,7 @@
         "DB_PORT": "3306",
         "DB_USER": "geminisoft",
         "DB_PASSWORD": "Geminisoft@",
-        "DB_NAME": "blog_database",
+        "DB_NAME": "blog_schema",
         "DB_DIALECT": "mysql"
       },
       "env_test" : {
@@ -39,7 +39,7 @@
         "DB_PORT": "3306",
         "DB_USER": "sheeper",
         "DB_PASSWORD": "H.S20T.H04",
-        "DB_NAME": "blog_database",
+        "DB_NAME": "blog_schema",
         "DB_DIALECT": "mysql"
       }
     }]

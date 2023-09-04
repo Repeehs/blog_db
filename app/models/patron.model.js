@@ -24,7 +24,7 @@ const patron = mySequel.define('patron', {
     },
 }, {
     underscored: false,
-    timestamp: false,
+    timestamps: false,
     updatedAt: false,
     createdAt: false,
     includeDeleted: true,

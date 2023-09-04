@@ -6,7 +6,6 @@
 const patron = require('../models/patron.model');
 const rest = require('../utils/restware.util');
 const config = require('../configs/general.config');
-const { Op } = require('sequelize');
 
 const bCrypt = require('bcryptjs');
 const jsonWebToken = require('jsonwebtoken');
@@ -25,11 +24,11 @@ module.exports = {
                 return rest.sendSuccessOne(res, result, 200);
             }).catch(function(error) {
                 'use strict';
-                console.log(error);
+                //console.log(error);
                 return rest.sendError(res, 1, 'create_patron_fail', 400, error);
             });
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             return rest.sendError(res, 1, 'create_patron_fail', 400, error);
         }
     },
@@ -57,7 +56,7 @@ module.exports = {
                 }
             });
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             return rest.sendError(res, 400, 'get_patron_fail', 400, error);
         }
     },
@@ -71,12 +70,13 @@ module.exports = {
             const sort = [];
             const offset = perPage * (page - 1);
 
-            book.findAndCountAll({
+            patron.findAndCountAll({
                 where: where,
                 limit: perPage,
                 offset: offset,
                 order: sort,
                 raw: true,
+                paranoid: false,
             })
                 .then((data) => {
                     const pages = Math.ceil(data.count / perPage);
@@ -101,10 +101,11 @@ module.exports = {
                     //console.log(res);
                     return rest.sendSuccessMany(res, output, 200);
                 }).catch(function(error) {
-                    return rest.sendError(res, 1, 'get_list_pitures_fail', 400, error);
+                    return rest.sendError(res, 1, 'get_list_patron_fail_1', 400, error);
             });
         } catch (error) {
-            return rest.sendError(res, 1, 'get_list_patron_fail', 400, error);
+            //console.log(error);
+            return rest.sendError(res, 1, 'get_list_patron_fail_2', 400, error);
         }
     },
 
@@ -139,11 +140,11 @@ module.exports = {
                 }
             }).catch(function(error) {
                 'use strict';
-                console.log(error);
+                //console.log(error);
                 return rest.sendError(res, 1, 'update_patron_fail', 400, error);
             });
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             return rest.sendError(res, 1, 'update_patron_fail', 400, error);
         }        
     },
