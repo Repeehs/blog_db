@@ -42,6 +42,7 @@ module.exports = {
             }).then((result)=>{
                 'use strict';
                 if(result) {
+                    //console.log(res);
                     return rest.sendSuccessOne(res, result, 200);
                 } else {
                     return rest.sendError(res, 1, 'unavailable_pic', 400);
@@ -88,7 +89,8 @@ module.exports = {
                     };
                     output.pages.hasNext = (output.pages.next !== 0);
                     output.pages.hexPrev = (output.pages.prev !== 0);
-                    return rest,sendSuccessMany(res, output, 200);
+                    //console.log(res);
+                    return rest.sendSuccessMany(res, output, 200);
                 }).catch(function(error) {
                     return rest.sendError(res, 1, 'get_list_pitures_fail', 400, error);
             });

@@ -20,6 +20,7 @@ module.exports = {
 
             patron.create(query).then((result)=>{
                 'use strict';
+                //console.log(res);
                 return rest.sendSuccessOne(res, result, 200);
             }).catch(function(error) {
                 'use strict';
@@ -33,25 +34,32 @@ module.exports = {
     },
 
     getOne: function(req, res) {
-        const id = req.params.id || '';
+//        const id = req.params.id || '';
         try {
             const attributes = ['id', 'name', 'donation', 'comment'];
 
-            const where = {id: id};
+//            const where = {id: id};
 
             patron.findOne({
-                where: where,
+                where: {
+                    [Oq.eq]: [
+                        {id: req.params.id}
+                    ]
+                },
                 attributes: attributes,
                 raw: true,
             }).then((result)=>{
                 'use strict';
                 if(result) {
+                    //console.log(res);
                     return rest.sendSuccessOne(res, result, 200);
                 } else {
+                    //console.log(res);
                     return rest.sendError(res, 1, 'unavailable_patron', 400);
                 }
             });
         } catch (error) {
+            //console.log(res);
             return rest.sendError(res, 400, 'get_patron_fail', 400, error);
         }
     },
@@ -92,7 +100,8 @@ module.exports = {
                     };
                     output.pages.hasNext = (output.pages.next !== 0);
                     output.pages.hexPrev = (output.pages.prev !== 0);
-                    return rest,sendSuccessMany(res, output, 200);
+                    //console.log(res);
+                    return rest.sendSuccessMany(res, output, 200);
                 }).catch(function(error) {
                     return rest.sendError(res, 1, 'get_list_pitures_fail', 400, error);
             });
