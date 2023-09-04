@@ -6,6 +6,7 @@
 const patron = require('../models/patron.model');
 const rest = require('../utils/restware.util');
 const config = require('../configs/general.config');
+const { Op } = require('sequelize');
 
 const bCrypt = require('bcryptjs');
 const jsonWebToken = require('jsonwebtoken');
@@ -40,26 +41,23 @@ module.exports = {
 
 //            const where = {id: id};
 
-            patron.findOne({
+            patron.findOne ({
                 where: {
-                    [Oq.eq]: [
-                        {id: req.params.id}
-                    ]
+                    id: req.params.id || '',
                 },
                 attributes: attributes,
                 raw: true,
+                paranoid: false,
             }).then((result)=>{
                 'use strict';
                 if(result) {
-                    //console.log(res);
                     return rest.sendSuccessOne(res, result, 200);
                 } else {
-                    //console.log(res);
                     return rest.sendError(res, 1, 'unavailable_patron', 400);
                 }
             });
         } catch (error) {
-            //console.log(res);
+            console.log(error);
             return rest.sendError(res, 400, 'get_patron_fail', 400, error);
         }
     },
