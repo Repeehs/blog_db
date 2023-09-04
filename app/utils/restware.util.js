@@ -8,7 +8,7 @@ const sendSuccessOne = function(res, data, iHttpCode) {
         return;
     }
 
-    const httpStatus = iHttp ? iHttpCode : 200;
+    const httpStatus = iHttpCode ? iHttpCode : 200;
     const out = {};
     
     if (data) {
@@ -24,7 +24,7 @@ const sendSuccessOne = function(res, data, iHttpCode) {
     return res.json(out);
 };
 
-const sendSuccessMany = function(res, data, ihttpCode) {
+const sendSuccessMany = function(res, data, iHttpCode) {
     if(!res) {
         return;
     }
