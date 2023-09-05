@@ -7,7 +7,7 @@ const picService = require('../services/picture.service');
 module.exports = function (app) {
     app.get('/api/blog/pictures', picService.getAll);
     /**
-     * @api {GET} /api/v1/pictures Get All
+     * @api {GET} /api/blog/pictures Get All
      * @apiVersion 0.1.0
      * @apiName getAll
      * @apiGroup Pictures
@@ -15,12 +15,10 @@ module.exports = function (app) {
      *
      * @apiDescription Get all pictures
      *
-     * @apiParam None
-     *
      * @apiExample Example usage:
-     * curl -i http://localhost:3000/api/v1/pictures
+     * curl -i http://localhost:3000/api/blog/pictures
      *
-     * @apiSuccess {String} list of all pictures' info
+     * @apiSuccess {String} data list of all pictures' info
      * 
      * @apiSuccessExample Success-Response:
      *     HTTP/1.1 200 OK
@@ -64,7 +62,7 @@ module.exports = function (app) {
      */
     app.get('/api/blog/pictures/:id', picService.getOne);
     /**
-     * @api {GET} /api/v1/pictures/:id Get One
+     * @api {GET} /api/blog/pictures/:id Get One
      * @apiVersion 0.1.0
      * @apiName getOne
      * @apiGroup Pictures
@@ -72,12 +70,12 @@ module.exports = function (app) {
      *
      * @apiDescription Get one picture
      *
-     * @apiParam {string} an ID of picture, on params
+     * @apiParam {string} id get an ID of picture, on params
      *
      * @apiExample Example usage:
-     * curl -i http://localhost:3000/api/v1/pictures/:id
+     * curl -i http://localhost:3000/api/blog/pictures/:id
      *
-     * @apiSuccess {String} information of patron
+     * @apiSuccess {String} data information of patron
      * 
      * @apiSuccessExample Success-Response:
      *     HTTP/1.1 200 OK

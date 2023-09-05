@@ -14,7 +14,9 @@ module.exports = {
     create: function(req, res) {
         try {
             const query = {};
-            query.name = req.body.name;
+            if(req.body.name){
+                query.name = req.body.name;
+            }
             query.donation = req.body.donation;
             query.comment = req.body.comment;
             query.id = function() {
