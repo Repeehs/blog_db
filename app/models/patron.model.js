@@ -11,7 +11,7 @@ const patron = mySequel.define('patron', {
 
     name: {
         type: sequel.STRING(100),
-        allowNull: true,
+        allowNull: false,
     },
 
     donation: {

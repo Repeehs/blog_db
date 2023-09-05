@@ -64,18 +64,18 @@ module.exports = function (app) {
      */
     app.get('/api/blog/pictures/:id', picService.getOne);
     /**
-     * @api {GET} /api/v1/patrons/:id Get One
+     * @api {GET} /api/v1/pictures/:id Get One
      * @apiVersion 0.1.0
      * @apiName getOne
-     * @apiGroup Patrons
+     * @apiGroup Pictures
      * @apiPermission Every type of users
      *
-     * @apiDescription Get one patron
+     * @apiDescription Get one picture
      *
-     * @apiParam {string} an ID of patron, on params
+     * @apiParam {string} an ID of picture, on params
      *
      * @apiExample Example usage:
-     * curl -i http://localhost:3000/api/v1/patrons/:id
+     * curl -i http://localhost:3000/api/v1/pictures/:id
      *
      * @apiSuccess {String} information of patron
      * 
@@ -84,25 +84,25 @@ module.exports = function (app) {
      *  {
      *    "data": {
      *        "id": 1,
-     *        "name": "Shawn Jackson",
-     *        "donation": 50,
-     *        "comment": "The art is not too bad, keep up the good work."
+     *        "name": "a",
+     *        "image": "https://res.cloudinary.com/dato5qlvn/image/upload/v1693832016/cwnitt8h8n2pezhbhknb.png",
+     *        "description": "a"
      *    },
      *    "message": "",
      *    "result": "ok"
      *  }
      * 
      * 
-     * @apiError get_patron_fail
+     * @apiError get_pic_fail
      *
      * @apiErrorExample Error-Response:
      *     HTTP/1.1 400 Bad Request
-     *  {
+     *{
      *    "result": "fail",
      *    "code": 400,
-     *    "error": "get_patron_fail",
+     *    "error": "get_pic_fail",
      *    "all": {}
-     *  }
+     *}
      */
     app.post('/api/blog/pictures', picService.create);
     app.put('/api/blog/pictures/:id', picService.update);

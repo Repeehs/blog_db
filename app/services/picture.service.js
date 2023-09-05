@@ -45,7 +45,7 @@ module.exports = {
                     //console.log(res);
                     return rest.sendSuccessOne(res, result, 200);
                 } else {
-                    return rest.sendError(res, 1, 'unavailable_pic', 400);
+                    return rest.sendError(res, 1, 'get_pic_fail', 400);
                 }
             });
         } catch (error) {

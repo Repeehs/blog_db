@@ -17,6 +17,9 @@ module.exports = {
             query.name = req.body.name;
             query.donation = req.body.donation;
             query.comment = req.body.comment;
+            query.id = function() {
+                try {patron.max('id')} catch (result) {return result};
+            }
 
             patron.create(query).then((result)=>{
                 'use strict';
