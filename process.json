@@ -19,7 +19,7 @@
         "DB_PORT": "3306",
         "DB_USER": "root",
         "DB_PASSWORD": "",
-        "DB_NAME": "blog_schema",
+        "DB_NAME": "blog_database",
         "DB_DIALECT": "mysql"
       },
       "env_production" : {
@@ -36,7 +36,7 @@
         "NODE_ENV": "test",
         "NODE_PORT": 3000,
         "DB_HOST":"db4free.net",
-        "DB_PORT": "443",
+        "DB_PORT": "3306",
         "DB_USER": "sheeper",
         "DB_PASSWORD": "H.S20T.H04",
         "DB_NAME": "test_api",

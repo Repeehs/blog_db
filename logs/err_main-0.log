@@ -31,3 +31,14 @@ SequelizeConnectionError: Unknown database 'blog_database'
     at async MySQLQueryInterface.select (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
     at async picture.findAll (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\model.js:1140:21)
     at async picture.findOne (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\model.js:1240:12)
+You have triggered an unhandledRejection, you may have forgotten to catch a Promise rejection:
+SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: YES)
+    at ConnectionManager.connect (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:94:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:222:24)
+    at async C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:174:32
+    at async ConnectionManager.getConnection (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:197:7)
+    at async C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\sequelize.js:305:26
+    at async MySQLQueryInterface.select (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async patron.findAll (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\model.js:1140:21)
+    at async patron.findOne (C:\School\Web development and database\projects\blog_db\node_modules\sequelize\lib\model.js:1240:12)
