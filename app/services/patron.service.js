@@ -52,7 +52,7 @@ module.exports = {
                 if(result) {
                     return rest.sendSuccessOne(res, result, 200);
                 } else {
-                    return rest.sendError(res, 1, 'unavailable_patron', 400);
+                    return rest.sendError(res, 1, 'get_patron_fail', 400);
                 }
             });
         } catch (error) {
@@ -101,11 +101,11 @@ module.exports = {
                     //console.log(res);
                     return rest.sendSuccessMany(res, output, 200);
                 }).catch(function(error) {
-                    return rest.sendError(res, 1, 'get_list_patron_fail_1', 400, error);
+                    return rest.sendError(res, 1, 'get_list_patron_fail', 400, error);
             });
         } catch (error) {
             //console.log(error);
-            return rest.sendError(res, 1, 'get_list_patron_fail_2', 400, error);
+            return rest.sendError(res, 1, 'get_list_patron_fail', 400, error);
         }
     },
 

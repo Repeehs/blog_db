@@ -133,3 +133,19 @@ ConnectionError [SequelizeConnectionError]: Unknown database 'blog_database'
 API started listening on port 3000
 ::1 - - [04/Sep/2023:12:17:50 +0000] "GET /api/blog/pictures HTTP/1.1" 400 334 "-" "PostmanRuntime/7.32.3"
 [0mGET /api/blog/pictures [33m400[0m 20.414 ms - 334[0m
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+::1 - - [05/Sep/2023:01:33:54 +0000] "GET /api/blog/patrons HTTP/1.1" 200 716 "-" "PostmanRuntime/7.32.3"
+::1 - - [05/Sep/2023:01:33:57 +0000] "GET /api/blog/patrons HTTP/1.1" 200 716 "-" "PostmanRuntime/7.32.3"
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+::1 - - [05/Sep/2023:01:35:13 +0000] "GET /api/blog/patrons HTTP/1.1" 400 68 "-" "PostmanRuntime/7.32.3"
+[0mGET /api/blog/patrons [33m400[0m 3.057 ms - 68[0m

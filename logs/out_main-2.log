@@ -10,3 +10,17 @@ API started listening on port 3000
 API started listening on port 3000
 API started listening on port 3000
 API started listening on port 3000
+API started listening on port 3000
+::1 - - [04/Sep/2023:12:40:42 +0000] "GET /api/blog/pictures HTTP/1.1" 200 1515 "-" "PostmanRuntime/7.32.3"
+::1 - - [04/Sep/2023:12:40:47 +0000] "GET /api/blog/ HTTP/1.1" 404 148 "-" "PostmanRuntime/7.32.3"
+[0mGET /api/blog/ [33m404[0m 3.638 ms - 148[0m
+::1 - - [04/Sep/2023:12:40:49 +0000] "GET /api/blog/patron HTTP/1.1" 404 154 "-" "PostmanRuntime/7.32.3"
+[0mGET /api/blog/patron [33m404[0m 0.590 ms - 154[0m
+::1 - - [04/Sep/2023:12:40:55 +0000] "GET /api/blog/patrons HTTP/1.1" 200 716 "-" "PostmanRuntime/7.32.3"
+::1 - - [04/Sep/2023:12:40:58 +0000] "GET /api/blog/patrons/1 HTTP/1.1" 200 140 "-" "PostmanRuntime/7.32.3"
+::1 - - [04/Sep/2023:12:41:04 +0000] "GET /api/blog/pictures/1 HTTP/1.1" 200 169 "-" "PostmanRuntime/7.32.3"
+::1 - - [04/Sep/2023:12:50:10 +0000] "GET /api/blog/pictures HTTP/1.1" 200 1515 "-" "PostmanRuntime/7.32.3"
+::1 - - [04/Sep/2023:12:59:47 +0000] "GET /api/blog/ HTTP/1.1" 404 148 "-" "PostmanRuntime/7.32.3"
+[0mGET /api/blog/ [33m404[0m 0.283 ms - 148[0m
+::1 - - [04/Sep/2023:12:59:52 +0000] "GET /api/blog/patrons HTTP/1.1" 200 716 "-" "PostmanRuntime/7.32.3"
+::1 - - [04/Sep/2023:13:00:56 +0000] "GET /api/blog/pictures HTTP/1.1" 200 1515 "-" "PostmanRuntime/7.32.3"
