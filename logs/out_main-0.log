@@ -180,7 +180,20 @@ API started listening on port 3000
 API started listening on port 3000
 API started listening on port 3000
 API started listening on port 3000
+<<<<<<< HEAD
 ::1 - - [05/Sep/2023:12:31:26 +0000] "GET /api/blog/patrons HTTP/1.1" 400 411 "-" "PostmanRuntime/7.32.3"
 [0mGET /api/blog/patrons [33m400[0m 66.087 ms - 411[0m
 ::1 - - [05/Sep/2023:12:31:39 +0000] "GET /api/blog/pictures HTTP/1.1" 400 412 "-" "PostmanRuntime/7.32.3"
 [0mGET /api/blog/pictures [33m400[0m 8.778 ms - 412[0m
+=======
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+>>>>>>> ad83166 (0)
