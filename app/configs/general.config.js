@@ -4,7 +4,7 @@ module.exports = {
         port: process.env.DB_PORT || 3306,
         username: process.env.DB_USER || 'sheeper',
         password: process.env.DB_PASSWORD || 'H.S20T.H04',
-        database: process.env.DB_NAME || "blog_schema",
+        database: process.env.DB_NAME || "test_api",
         dialect: process.env.DB_DIALECT || "mysql",
     },
     jwtAuthKey: 'abcxyz',
