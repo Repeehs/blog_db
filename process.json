@@ -39,7 +39,7 @@
         "DB_PORT": "3306",
         "DB_USER": "sheeper",
         "DB_PASSWORD": "H.S20T.H04",
-        "DB_NAME": "test_api",
+        "DB_NAME": "blog_schema",
         "DB_DIALECT": "mysql"
       }
     }]
