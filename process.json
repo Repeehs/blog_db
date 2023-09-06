@@ -18,10 +18,13 @@
         "DB_HOST":"127.0.0.1",
         "DB_PORT": "3306",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "DB_USER": "root",
         "DB_PASSWORD": "",
         "DB_NAME": "blog_database",
 =======
+=======
+>>>>>>> 4d4333b (Deploy test (again))
         "DB_USER": "sheeper",
         "DB_PASSWORD": "sheeper",
         "DB_NAME": "blog_schema",
