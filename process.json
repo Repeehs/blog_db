@@ -11,14 +11,14 @@
       "kill_timeout" : 3000,
       "wait_ready": true,
       "listen_timeout" : 3000,
-      "env_development": {
-        "NODE_ENV": "development",
-        "NODE_PORT":3000,
+      "env_dev": {
+        "NODE_ENV": "dev",
+        "NODE_PORT": 3000,
   
         "DB_HOST":"127.0.0.1",
         "DB_PORT": "3306",
-        "DB_USER": "root",
-        "DB_PASSWORD": "",
+        "DB_USER": "sheeper",
+        "DB_PASSWORD": "sheeper",
         "DB_NAME": "blog_schema",
         "DB_DIALECT": "mysql"
       },
@@ -39,7 +39,7 @@
         "DB_PORT": "3306",
         "DB_USER": "sheeper",
         "DB_PASSWORD": "H.S20T.H04",
-        "DB_NAME": "test_api",
+        "DB_NAME": "blog_schema",
         "DB_DIALECT": "mysql"
       }
     }]

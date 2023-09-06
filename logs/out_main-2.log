@@ -24,3 +24,13 @@ API started listening on port 3000
 [0mGET /api/blog/ [33m404[0m 0.283 ms - 148[0m
 ::1 - - [04/Sep/2023:12:59:52 +0000] "GET /api/blog/patrons HTTP/1.1" 200 716 "-" "PostmanRuntime/7.32.3"
 ::1 - - [04/Sep/2023:13:00:56 +0000] "GET /api/blog/pictures HTTP/1.1" 200 1515 "-" "PostmanRuntime/7.32.3"
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+::1 - - [05/Sep/2023:14:10:01 +0000] "GET /api/blog/patrons HTTP/1.1" 400 417 "-" "PostmanRuntime/7.32.3"
+[0mGET /api/blog/patrons [33m400[0m 32.084 ms - 417[0m
+API started listening on port 3000
+API started listening on port 3000
+API started listening on port 3000
+::1 - - [05/Sep/2023:14:11:26 +0000] "GET /api/blog/patrons HTTP/1.1" 400 409 "-" "PostmanRuntime/7.32.3"
+[0mGET /api/blog/patrons [33m400[0m 26.383 ms - 409[0m
